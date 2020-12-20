@@ -11,8 +11,9 @@ module EditorJs
           properties:
             caption:
               type: string
-            url:
-              type: string
+            file:
+              url:
+                type: string
             stretched:
               type: boolean
             withBackground:
@@ -26,7 +27,7 @@ module EditorJs
 
       def render(_options = {})
         content_tag :div, class: css_name do
-          url = data['url']
+          url = data['file']['url']
           caption = data['caption']
           withBorder = data['withBorder']
           withBackground = data['withBackground']
