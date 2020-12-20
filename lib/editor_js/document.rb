@@ -37,8 +37,8 @@ module EditorJs
         EditorJs::Blocks::Base.load(blk_data)
       end
       @valid = blocks.all?(&:valid?)
-      @blocks = blocks if @valid
-      @valid
+      @blocks = blocks
+      true
     end
 
     def render
