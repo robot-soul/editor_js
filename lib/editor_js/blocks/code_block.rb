@@ -17,7 +17,7 @@ module EditorJs
       end
 
       def render(_options = {})
-        content_tag :code, class: css_name do
+        content_tag :code, class: "#{css_name} #{data['languageCode']}" do
           data['code']
         end
       end
